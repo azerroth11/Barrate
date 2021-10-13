@@ -172,7 +172,7 @@ nav a:hover {
 #gallerie .carousel .active p {
     position: absolute;
     bottom: -15px;
-    left: 25%;
+    left: 20%;
     text-align: center;
     color: #000;
 }

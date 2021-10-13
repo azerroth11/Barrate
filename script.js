@@ -38,9 +38,9 @@ const leftImg = left.appendChild(document.createElement('img'))
 const activeImg = active.appendChild(document.createElement('img'))
 const rightImg = right.appendChild(document.createElement('img'))
 
-leftImg.src = photos[2]
-activeImg.src = photos[3]
-rightImg.src = photos[4]
+leftImg.src = photos[0]
+activeImg.src = photos[1]
+rightImg.src = photos[2]
 
 leftBtn.addEventListener('click', () => {
     leftImg.src = photos[photos.indexOf(leftImg.attributes[0].nodeValue) - 1]
