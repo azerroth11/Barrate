@@ -155,7 +155,7 @@ nav a:hover {
 .gallerie .carousel .left img {
     position: absolute;
     scale: 0.6;
-    top: 60%;
+    top: 56.5%;
     right: 40%;
     transform: translate(0, -100%);
     opacity: 50%;
@@ -182,7 +182,7 @@ nav a:hover {
 .gallerie .carousel .right img {
     position: absolute;
     scale: 0.6;
-    top: 60%;
+    top: 56.5%;
     left: 40%;
     transform: translate(0, -100%);
     opacity: 50%;
