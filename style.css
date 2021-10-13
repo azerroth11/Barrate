@@ -1,0 +1,212 @@
+:root {
+    --main: hsl(42, 50%, 92%);
+    --secondary: hsl(0, 100%, 28%);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    background-color: #000;
+}
+
+body {
+    max-width: 1440px;
+    margin: 0 auto;
+    height: 100%;
+    font-size: 18px;
+    line-height: 1.375rem;
+    background-color: var(--main);
+    overflow-x: hidden;
+}
+
+/* Commons */
+section {
+    min-height: 70vh;
+    padding: 1rem;
+    margin: 0 auto;
+    max-width: 80ch;
+    display: grid;
+    place-items: center;
+    gap: 0.5rem;
+}
+
+section h1 {
+    padding-bottom: 1rem;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+h1 {
+    color: var(--secondary);
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+p {
+    max-width: 50ch;
+}
+
+/* Nav */
+header {
+    height: 20vh;
+    display: flex;
+    background-color: #000;
+}
+
+header img {
+    margin: 0 auto;
+    object-fit: contain;
+    max-height: 175px;
+    padding: 0 0.5rem;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    height: 40px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    width: 100%;
+    list-style: none;
+    font-size: 1.25rem;
+    background-color: #000;
+    color: var(--main);
+    padding: 0.5rem 0;
+}
+
+nav a:hover {
+    color: #fff;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
+}
+
+/* Hero */
+.hero {
+    height: 75vh;
+    min-height: 0 !important;
+    max-width: 55ch;
+}
+
+.hero p {
+    text-align: center;
+}
+
+.hero .intro:first-letter {
+    float: left;
+    font-size: 10vh;
+    color: #8c8273;
+}
+
+.hero p span {
+    font-weight: bold;
+}
+
+.hero iframe {
+    margin-top: 0.75rem;
+    width: 100%;
+    height: 100%;
+}
+
+.hero a {
+    margin-top: 1.5rem;
+    background-color: var(--secondary);
+    color: #fff;
+    text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.8);
+    padding: 1rem 2.5rem;
+    font-size: 1.25rem;
+    border: 1px solid #000;
+}
+
+/* Gallerie */
+.gallerie .carousel {
+    display: flex;
+    position: relative;
+    height: 70vh;
+}
+
+.gallerie .carousel .left i {
+    position: absolute;
+    top: 50%;
+    left: -2.5%;
+    scale: 1.75;
+    z-index: 100;
+}
+
+.gallerie .carousel .left i:hover,
+.gallerie .carousel .right i:hover {
+    cursor: pointer;
+    text-shadow: 1px 1px 5px rgba(255, 255, 255, 0.8);
+}
+
+.gallerie .carousel .left img {
+    position: absolute;
+    scale: 0.6;
+    top: 60%;
+    right: 40%;
+    transform: translate(0, -100%);
+    opacity: 50%;
+    height: 40vh;
+    width: 75vw;
+    object-fit: cover;
+}
+
+.gallerie .carousel .active {
+    position: relative;
+    scale: 0.9;
+    z-index: 100;
+    place-self: center;
+}
+
+.gallerie .carousel .right i {
+    position: absolute;
+    top: 50%;
+    right: -2.5%;
+    scale: 1.75;
+    z-index: 100;
+}
+
+.gallerie .carousel .right img {
+    position: absolute;
+    scale: 0.6;
+    top: 60%;
+    left: 40%;
+    transform: translate(0, -100%);
+    opacity: 50%;
+    height: 40vh;
+    width: 75vw;
+    object-fit: cover;
+}
+
+/* Supporter */
+.supporter {
+    gap: 1rem;
+}
+
+.supporter a {
+    text-decoration: underline;
+}
+
+.supporter .supporter-action {
+    background-color: var(--secondary);
+    color: #fff;
+    text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.8);
+    padding: 1rem 2.5rem;
+    font-size: 1.25rem;
+    border: 1px solid #000;
+    text-align: center;
+    text-decoration: none;
+}
