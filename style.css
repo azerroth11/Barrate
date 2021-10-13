@@ -11,6 +11,7 @@
 
 html {
     background-color: #000;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -18,7 +19,7 @@ body {
     margin: 0 auto;
     height: 100%;
     font-size: 18px;
-    line-height: 1.375rem;
+    line-height: 1.5rem;
     background-color: var(--main);
     overflow-x: hidden;
 }
@@ -35,7 +36,7 @@ section {
 }
 
 section h1 {
-    padding-bottom: 1rem;
+    padding: 1.75rem 0 0.25rem 0;
 }
 
 img {
@@ -75,6 +76,7 @@ nav {
     position: sticky;
     top: 0;
     height: 40px;
+    z-index: 100;
 }
 
 nav ul {
@@ -95,33 +97,29 @@ nav a:hover {
 }
 
 /* Hero */
-.hero {
+#hero {
     height: 75vh;
     min-height: 0 !important;
     max-width: 55ch;
 }
 
-.hero p {
-    text-align: center;
-}
-
-.hero .intro:first-letter {
+#hero .intro:first-letter {
     float: left;
     font-size: 10vh;
     color: #8c8273;
 }
 
-.hero p span {
+#hero p span {
     font-weight: bold;
 }
 
-.hero iframe {
+#hero iframe {
     margin-top: 0.75rem;
     width: 100%;
     height: 100%;
 }
 
-.hero a {
+#hero a {
     margin-top: 1.5rem;
     background-color: var(--secondary);
     color: #fff;
@@ -132,13 +130,13 @@ nav a:hover {
 }
 
 /* Gallerie */
-.gallerie .carousel {
+#gallerie .carousel {
     display: flex;
     position: relative;
     height: 70vh;
 }
 
-.gallerie .carousel .left i {
+#gallerie .carousel .left i {
     position: absolute;
     top: 50%;
     left: -2.5%;
@@ -146,13 +144,13 @@ nav a:hover {
     z-index: 100;
 }
 
-.gallerie .carousel .left i:hover,
-.gallerie .carousel .right i:hover {
+#gallerie .carousel .left i:hover,
+#gallerie .carousel .right i:hover {
     cursor: pointer;
     text-shadow: 1px 1px 5px rgba(255, 255, 255, 0.8);
 }
 
-.gallerie .carousel .left img {
+#gallerie .carousel .left img {
     position: absolute;
     scale: 0.6;
     top: 56.5%;
@@ -164,14 +162,14 @@ nav a:hover {
     object-fit: cover;
 }
 
-.gallerie .carousel .active {
+#gallerie .carousel .active {
     position: relative;
     scale: 0.9;
-    z-index: 100;
+    z-index: 50;
     place-self: center;
 }
 
-.gallerie .carousel .right i {
+#gallerie .carousel .right i {
     position: absolute;
     top: 50%;
     right: -2.5%;
@@ -179,7 +177,7 @@ nav a:hover {
     z-index: 100;
 }
 
-.gallerie .carousel .right img {
+#gallerie .carousel .right img {
     position: absolute;
     scale: 0.6;
     top: 56.5%;
@@ -192,15 +190,15 @@ nav a:hover {
 }
 
 /* Supporter */
-.supporter {
+#supporter {
     gap: 1rem;
 }
 
-.supporter a {
+#supporter a {
     text-decoration: underline;
 }
 
-.supporter .supporter-action {
+#supporter .supporter-action {
     background-color: var(--secondary);
     color: #fff;
     text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.8);
