@@ -158,16 +158,57 @@ nav a:hover {
     gap: 0.5rem;
     margin: 0 auto;
     height: 100%;
+    width: 100%;
     max-width: 50ch;
 }
 
 #histoire .desktop {
-    position: relative;
+    min-height: 50vh;
+}
+
+#histoire .desktop .characterDesc h2 {
+    position: absolute;
+    top: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 300px;
+    text-align: center;
 }
 
 #histoire .desktop img {
     position: absolute;
-    top: 0
+    top: 0;
+    left: 0;
+    border-radius: 5px;
+    z-index: 1;
+    transition: clip-path 0.5s, z-index 0.5s step-end;
+}
+
+#histoire .desktop img:hover {
+    cursor: pointer;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%) !important;
+    z-index: 2;
+    transition: clip-path 0.5s, z-index 0.5s step-start;
+}
+
+#histoire .desktop #Karadec {
+    clip-path: polygon(0 0, 50% 50%, 50% 50%, 0% 100%);
+}
+
+#histoire .desktop #Baldric {
+    clip-path: polygon(0 0, 100% 0, 50% 50%, 50% 50%);
+}
+#histoire .desktop #Gaucelin {
+    clip-path: polygon(50% 50%, 100% 0, 100% 100%, 50% 50%);
+}
+#histoire .desktop #Temp {
+    clip-path: polygon(50% 50%, 50% 50%, 100% 100%, 0% 100%);
+}
+
+#histoire .desktop .characterDesc p {
+    position: absolute;
+    bottom: -5%;
+    left: 0;
 }
 
 /* Gallerie */
@@ -218,9 +259,11 @@ nav a:hover {
 #gallerie .carousel .active p {
     position: absolute;
     bottom: -25px;
-    left: 20%;
+    left: 50%;
     text-align: center;
     color: #000;
+    transform: translateX(-50%);
+    width: 250px;
 }
 
 #gallerie .carousel .active p a {
@@ -285,13 +328,14 @@ nav a:hover {
 }
 
 @media screen and (min-width: 1000px) {
-    #hero {
+    #hero,
+    #histoire {
         display: flex;
         max-width: 1250px;
     }
 
     .desktop {
         visibility: visible;
-        position: inherit;
+        position: relative;
     }
 }

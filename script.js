@@ -1,3 +1,4 @@
+// Carousel
 const carousel = document.querySelector('.carousel')
 const photos = [
     './img/gallerie/1.jpg',
@@ -70,7 +71,8 @@ rightBtn.addEventListener('click', () => {
     }
 })
 
-let el = document.querySelector('.desktop')
+// Affiche 3D
+let el = document.querySelector('#affiche')
 const height = el.clientHeight
 const width = el.clientWidth
 el.addEventListener('mousemove', handleMove)
@@ -98,4 +100,31 @@ el.addEventListener('mousedown', function () {
 
 el.addEventListener('mouseup', function () {
     el.style.transform = 'perspective(500px) scale(1) rotateX(0) rotateY(0)'
+})
+
+// Characters
+const portraitsArray = document.querySelectorAll('.charPortrait')
+const charName = document.querySelector('.charName')
+const charDesc = document.querySelector('.charDesc')
+
+Array.from(portraitsArray).forEach(e => {
+    e.addEventListener('mouseover', () => {
+        charName.innerText = e.id
+        if (e.id == 'Karadec') {
+            charDesc.innerText =
+                "Karadec est un mercenaire et ancien chevalier d'ébène..."
+        } else if (e.id == 'Baldric') {
+            charDesc.innerText = "À l'âge de 7 ans... "
+        } else if (e.id == 'Gaucelin') {
+            charDesc.innerText =
+                "Gaucelin qu'on appelle souvent Loudier est un..."
+        } else {
+            charDesc.innerText =
+                "Paulin est un habile homme d'affaires qui ruse et..."
+        }
+    })
+    e.addEventListener('mouseout', () => {
+        charName.innerText = 'Choisissez un personnage'
+        charDesc.innerText = ''
+    })
 })
