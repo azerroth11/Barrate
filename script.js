@@ -70,24 +70,32 @@ rightBtn.addEventListener('click', () => {
     }
 })
 
-// leftBtn.addEventListener('click', () => {
-//     const leftPhoto = document.querySelector('.left').lastElementChild
-//     const activePhoto = document.querySelector('.active').firstElementChild
-//     const rightPhoto = document.querySelector('.right').lastElementChild
-//     const activeNamePre = activePhoto.src.substr(35, activePhoto.length)
-//     const activeName = activeNamePre.substr(0, activeNamePre.length - 4)
-//     leftPhoto.src = `./img/gallerie/${+activeName}.jpg`
-//     activePhoto.src = `./img/gallerie/${+activeName - 1}.jpg`
-//     rightPhoto.src = `./img/gallerie/${+activeName - 2}.jpg`
-// })
+let el = document.querySelector('.desktop')
+const height = el.clientHeight
+const width = el.clientWidth
+el.addEventListener('mousemove', handleMove)
+function handleMove(e) {
+    const xVal = e.layerX
+    const yVal = e.layerY
+    const yRotation = 20 * ((xVal - width / 2) / width)
+    const xRotation = -20 * ((yVal - height / 2) / height)
+    const string =
+        'perspective(500px) scale(1.1) rotateX(' +
+        xRotation +
+        'deg) rotateY(' +
+        yRotation +
+        'deg)'
+    el.style.transform = string
+}
 
-// rightBtn.addEventListener('click', () => {
-//     const leftPhoto = document.querySelector('.left').lastElementChild
-//     const activePhoto = document.querySelector('.active').firstElementChild
-//     const rightPhoto = document.querySelector('.right').lastElementChild
-//     const activeNamePre = activePhoto.src.substr(35, activePhoto.length)
-//     const activeName = activeNamePre.substr(0, activeNamePre.length - 4)
-//     leftPhoto.src = `./img/gallerie/${+activeName}.jpg`
-//     activePhoto.src = `./img/gallerie/${+activeName + 1}.jpg`
-//     rightPhoto.src = `./img/gallerie/${+activeName + 2}.jpg`
-// })
+el.addEventListener('mouseout', function () {
+    el.style.transform = 'perspective(500px) scale(1) rotateX(0) rotateY(0)'
+})
+
+el.addEventListener('mousedown', function () {
+    el.style.transform = 'perspective(500px) scale(0.9) rotateX(0) rotateY(0)'
+})
+
+el.addEventListener('mouseup', function () {
+    el.style.transform = 'perspective(500px) scale(1) rotateX(0) rotateY(0)'
+})

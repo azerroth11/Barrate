@@ -7,7 +7,6 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    -webkit-overflow-scrolling: touch;
 }
 
 html {
@@ -59,6 +58,11 @@ p {
     max-width: 50ch;
 }
 
+.desktop {
+    visibility: hidden;
+    position: absolute;
+}
+
 /* Nav */
 header {
     height: 20vh;
@@ -101,12 +105,21 @@ nav a:hover {
 #hero {
     height: 75vh;
     min-height: 0 !important;
-    max-width: 55ch;
+}
+
+#hero div {
+    display: grid;
+    place-items: center;
+    gap: 0.5rem;
+    margin: 0 auto;
+    height: 100%;
+    max-width: 50ch;
+    max-height: 600px;
 }
 
 #hero .intro:first-letter {
     float: left;
-    font-size: 11vh;
+    font-size: 8vh;
     color: #8c8273;
 }
 
@@ -130,17 +143,45 @@ nav a:hover {
     border: 1px solid #000;
 }
 
+#hero .desktop {
+    transition: box-shadow 0.5s, transform 0.25s ease-out;
+}
+
+#hero .desktop:hover {
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Histoire */
+#histoire div {
+    display: grid;
+    place-items: center;
+    gap: 0.5rem;
+    margin: 0 auto;
+    height: 100%;
+    max-width: 50ch;
+}
+
+#histoire .desktop {
+    position: relative;
+}
+
+#histoire .desktop img {
+    position: absolute;
+    top: 0
+}
+
 /* Gallerie */
 #gallerie .carousel {
     display: flex;
     position: relative;
+    height: 70vh;
 }
 
 #gallerie .carousel .left i {
     position: absolute;
     top: 50%;
     left: -2.5%;
-    scale: 1.75;
+    transform: scale(1.75);
     z-index: 100;
 }
 
@@ -152,10 +193,9 @@ nav a:hover {
 
 #gallerie .carousel .left img {
     position: absolute;
-    scale: 0.6;
-    top: 56.5%;
+    top: 22.5%;
     right: 40%;
-    transform: translate(0, -100%);
+    transform: scale(0.6);
     opacity: 50%;
     height: 40vh;
     width: 75vw;
@@ -163,15 +203,21 @@ nav a:hover {
 }
 
 #gallerie .carousel .active {
+    display: flex;
     position: relative;
-    scale: 0.9;
+    transform: scale(0.9);
     z-index: 50;
     place-self: center;
+    max-height: 65vh;
+}
+
+#gallerie .carousel .active img {
+    object-fit: contain;
 }
 
 #gallerie .carousel .active p {
     position: absolute;
-    bottom: -15px;
+    bottom: -25px;
     left: 20%;
     text-align: center;
     color: #000;
@@ -189,16 +235,15 @@ nav a:hover {
     position: absolute;
     top: 50%;
     right: -2.5%;
-    scale: 1.75;
+    transform: scale(1.75);
     z-index: 100;
 }
 
 #gallerie .carousel .right img {
     position: absolute;
-    scale: 0.6;
-    top: 56.5%;
+    top: 22.5%;
     left: 40%;
-    transform: translate(0, -100%);
+    transform: scale(0.6);
     opacity: 50%;
     height: 40vh;
     width: 75vw;
@@ -237,4 +282,16 @@ nav a:hover {
     border: 1px solid #000;
     text-align: center;
     text-decoration: none;
+}
+
+@media screen and (min-width: 1000px) {
+    #hero {
+        display: flex;
+        max-width: 1250px;
+    }
+
+    .desktop {
+        visibility: visible;
+        position: inherit;
+    }
 }
