@@ -80,16 +80,17 @@ Array.from(portraitsArray).forEach(e => {
     e.addEventListener('mouseover', () => {
         charName.innerText = e.id
         if (e.id == 'Karadec') {
-            charDesc.innerText =
-                "Karadec est un mercenaire et ancien chevalier d'ébène..."
+            charDesc.innerHTML =
+                "<strong> Jean de Karadec </strong> est un mercenaire et ancien chevalier d'ébène. Il est le fils unique d'Ewen et de Guenièvre de Karadec."
         } else if (e.id == 'Baldric') {
-            charDesc.innerText = "À l'âge de 7 ans... "
+            charDesc.innerHTML =
+                "<strong>Baldric Biniou de Montroi</strong> est un chevalier hors-pair. C'est le bras droit de Paulin. Il est fils de Godefroy et Elisabeth Biniou de Montroi ainsi que le frère d'Ida et de Morvan."
         } else if (e.id == 'Gaucelin') {
-            charDesc.innerText =
-                "Gaucelin qu'on appelle souvent Loudier est un..."
+            charDesc.innerHTML =
+                "<strong>Gaucelin</strong> qu'on appelle souvent Loudier est le fils d'un père inconnu et de Gwendoline la Barjotte. Il est le père de 12 enfants et le mari d'Emelotte, aussi surnommée Lolotte."
         } else {
-            charDesc.innerText =
-                "Paulin est un habile homme d'affaires qui ruse et..."
+            charDesc.innerHTML =
+                "<strong>Sir Paulin</strong> dit le Fourbe, est un habile homme d'affaires. Il est fils de Gislebert et d'Adélaide de Boleor, mari de Dame Béatrice et père d'Aliénor."
         }
     })
     e.addEventListener('mouseout', () => {

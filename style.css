@@ -166,7 +166,7 @@ nav a:hover {
     position: absolute;
     top: -35px;
     left: 50%;
-    transform: translateX(-65%);
+    transform: translateX(-50%);
     width: 300px;
     text-align: center;
 }
@@ -174,9 +174,10 @@ nav a:hover {
 #histoire .desktop img {
     position: absolute;
     top: 0;
-    left: 0;
+    left: 50%;
     border-radius: 5px;
     z-index: 1;
+    transform: translateX(-50%);
     transition: clip-path 0.5s, z-index 0.5s step-end;
 }
 
@@ -203,8 +204,11 @@ nav a:hover {
 
 #histoire .desktop .characterDesc p {
     position: absolute;
-    bottom: -5%;
-    left: 0;
+    bottom: -22.5%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 38ch;
+    z-index: 3;
 }
 
 /* Gallerie */
