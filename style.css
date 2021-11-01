@@ -166,7 +166,7 @@ nav a:hover {
     position: absolute;
     top: -35px;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-65%);
     width: 300px;
     text-align: center;
 }
@@ -188,17 +188,17 @@ nav a:hover {
 }
 
 #histoire .desktop #Karadec {
-    clip-path: polygon(0 0, 50% 50%, 50% 50%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0, 50% 50%, 50% 50%);
 }
 
 #histoire .desktop #Baldric {
-    clip-path: polygon(0 0, 100% 0, 50% 50%, 50% 50%);
+    clip-path: polygon(50% 50%, 50% 50%, 100% 100%, 0% 100%);
 }
 #histoire .desktop #Gaucelin {
     clip-path: polygon(50% 50%, 100% 0, 100% 100%, 50% 50%);
 }
-#histoire .desktop #Temp {
-    clip-path: polygon(50% 50%, 50% 50%, 100% 100%, 0% 100%);
+#histoire .desktop #SirPaulin {
+    clip-path: polygon(0 0, 50% 50%, 50% 50%, 0% 100%);
 }
 
 #histoire .desktop .characterDesc p {
