@@ -26,11 +26,10 @@ html.is-flickity-fullscreen {
 }
 
 /* ---- flickity-fullscreen-button ---- */
-
 .flickity-fullscreen-button {
     display: block;
     right: 10px;
-    top: 10px;
+    top: 12%;
     width: 24px;
     height: 24px;
     border-radius: 4px;
