@@ -5,13 +5,12 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="icon" href="./img/favicon.ico" />
-        <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-        />
-        <link rel="stylesheet" href="./style.css" />
-
-        <script src="script.js" defer></script>
+        <link rel="stylesheet" href="./css/flickity.css" />
+        <link rel="stylesheet" href="./css/flickity-fade.css" />
+        <link rel="stylesheet" href="./css/style.css" />
+        <script src="js/flickity.js" defer></script>
+        <script src="js/flickity-fade.js" defer></script>
+        <script src="js/script.js" defer></script>
         <title>La Cour de Barrate</title>
     </head>
 
@@ -112,25 +111,19 @@
 
         <section id="gallerie">
             <h1>Quelques clichés pris sur le tournage...</h1>
-            <div class="carousel">
-                <div class="left">
-                    <i class="fas fa-arrow-circle-left"></i>
-                </div>
-                <div class="active">
-                    <p>
-                        Photo de
-                        <a href="https://www.instagram.com/sean_photographie/"
-                            >sean_photographie</a
-                        >
-                    </p>
-                </div>
-                <div class="right">
-                    <i class="fas fa-arrow-circle-right"></i>
-                </div>
-            </div>
-            <div class="link-instagram">
-                <a>NOTRE INSTAGRAM</a>
-            </div>
+            <div
+                class="main-carousel"
+                data-flickity='{ "wrapAround": true, "fade": true, "autoPlay": 1, "pauseAutoPlayOnHover": true, "adaptiveHeight": true, "fullscreen": true }'
+            ></div>
+            <p>
+                Photos de
+                <b
+                    ><a href="https://www.instagram.com/sean_photographie/"
+                        >sean_photographie</a
+                    ></b
+                >
+            </p>
+            <a class="btn" href="javascript:;">NOTRE INSTAGRAM</a>
         </section>
 
         <section id="supporter">

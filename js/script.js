@@ -1,5 +1,5 @@
 // Carousel
-const carousel = document.querySelector('.carousel')
+const carousel = document.querySelector('.main-carousel')
 const photos = [
     './img/gallerie/1.jpg',
     './img/gallerie/2.jpg',
@@ -30,45 +30,10 @@ const photos = [
     './img/gallerie/27.jpg',
     './img/gallerie/28.jpg',
 ]
-const left = document.querySelector('.left')
-const active = document.querySelector('.active')
-const right = document.querySelector('.right')
-const leftBtn = document.querySelector('.fa-arrow-circle-left')
-const rightBtn = document.querySelector('.fa-arrow-circle-right')
-const leftImg = left.appendChild(document.createElement('img'))
-const activeImg = active.appendChild(document.createElement('img'))
-const rightImg = right.appendChild(document.createElement('img'))
 
-leftImg.src = photos[0]
-activeImg.src = photos[1]
-rightImg.src = photos[2]
-
-leftBtn.addEventListener('click', () => {
-    leftImg.src = photos[photos.indexOf(leftImg.attributes[0].nodeValue) - 1]
-    activeImg.src =
-        photos[photos.indexOf(activeImg.attributes[0].nodeValue) - 1]
-    rightImg.src = photos[photos.indexOf(rightImg.attributes[0].nodeValue) - 1]
-    if (leftImg.attributes[0].nodeValue == 'undefined') {
-        leftImg.src = photos[photos.length - 1]
-    } else if (activeImg.attributes[0].nodeValue == 'undefined') {
-        activeImg.src = photos[photos.length - 1]
-    } else if (rightImg.attributes[0].nodeValue == 'undefined') {
-        rightImg.src = photos[photos.length - 1]
-    }
-})
-
-rightBtn.addEventListener('click', () => {
-    leftImg.src = photos[photos.indexOf(leftImg.attributes[0].nodeValue) + 1]
-    activeImg.src =
-        photos[photos.indexOf(activeImg.attributes[0].nodeValue) + 1]
-    rightImg.src = photos[photos.indexOf(rightImg.attributes[0].nodeValue) + 1]
-    if (leftImg.attributes[0].nodeValue == 'undefined') {
-        leftImg.src = photos[0]
-    } else if (activeImg.attributes[0].nodeValue == 'undefined') {
-        activeImg.src = photos[0]
-    } else if (rightImg.attributes[0].nodeValue == 'undefined') {
-        rightImg.src = photos[0]
-    }
+photos.forEach(photo => {
+    const carouselCellImg = carousel.appendChild(document.createElement('img'))
+    carouselCellImg.src = photo
 })
 
 // Characters
