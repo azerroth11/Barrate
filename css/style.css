@@ -144,6 +144,10 @@ nav a:hover {
 }
 
 /* Histoire */
+#histoire {
+    min-height: 75vh;
+}
+
 #histoire div {
     display: grid;
     place-items: center;
@@ -253,6 +257,7 @@ nav a:hover {
 /* Supporter */
 #supporter {
     gap: 1rem;
+    min-height: 70vh;
 }
 
 #supporter a {
