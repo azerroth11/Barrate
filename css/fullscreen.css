@@ -29,7 +29,7 @@ html.is-flickity-fullscreen {
 .flickity-fullscreen-button {
     display: block;
     right: 10px;
-    top: 12%;
+    top: 10px;
     width: 24px;
     height: 24px;
     border-radius: 4px;
@@ -47,6 +47,7 @@ html.is-flickity-fullscreen {
 
 .flickity-enabled.is-fullscreen .flickity-fullscreen-button-exit {
     display: block;
+    top: 12%;
 }
 .flickity-enabled.is-fullscreen .flickity-fullscreen-button-view {
     display: none;

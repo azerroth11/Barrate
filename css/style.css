@@ -18,6 +18,7 @@ body {
     max-width: 1440px;
     margin: 0 auto;
     height: 100%;
+    width: 100vw;
     font-size: 18px;
     line-height: 1.5rem;
     background-color: var(--main);
@@ -26,7 +27,6 @@ body {
 
 /* Commons */
 section {
-    /* min-height: 85vh; */
     padding: 1rem;
     margin: 0 auto;
     max-width: 80ch;
@@ -285,5 +285,9 @@ nav a:hover {
     .desktop {
         visibility: visible;
         position: relative;
+    }
+
+    .flickity-enabled.is-fullscreen .flickity-fullscreen-button-exit {
+        top: 10px;
     }
 }
