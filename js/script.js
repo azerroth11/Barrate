@@ -46,7 +46,7 @@ Array.from(portraitsArray).forEach(e => {
         charName.innerText = e.id
         if (e.id == 'Karadec') {
             charDesc.innerHTML =
-                "<strong> Jean de Karadec </strong> est un mercenaire et ancien chevalier d'ébène. Il est le fils unique d'Ewen et de Guenièvre de Karadec."
+                "<strong> Jean de Karadec </strong> est un mercenaire et ancien chevalier d'ébène. Il est le fils unique d'Ewen et de Guenièvre de Karadec. Il aime la bière, les jeux et le danger."
         } else if (e.id == 'Baldric') {
             charDesc.innerHTML =
                 "<strong>Baldric Biniou de Montroi</strong> est un chevalier hors-pair. C'est le bras droit de Paulin. Il est fils de Godefroy et Elisabeth Biniou de Montroi ainsi que le frère d'Ida et de Morvan."

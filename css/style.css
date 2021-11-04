@@ -91,7 +91,7 @@ nav {
     position: sticky;
     top: 0;
     height: 40px;
-    z-index: 100;
+    z-index: 4;
 }
 
 nav ul {
@@ -208,7 +208,7 @@ nav a:hover {
 
 #histoire .desktop .characterDesc p {
     position: absolute;
-    bottom: -22.5%;
+    bottom: -25.5%;
     left: 50%;
     transform: translateX(-50%);
     width: 38ch;
@@ -268,9 +268,5 @@ nav a:hover {
     .desktop {
         display: block !important;
         position: relative;
-    }
-
-    .flickity-enabled.is-fullscreen .flickity-fullscreen-button-exit {
-        top: 10px;
     }
 }
