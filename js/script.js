@@ -33,7 +33,7 @@ const photos = [
 
 photos.forEach(photo => {
     const carouselCellImg = carousel.appendChild(document.createElement('img'))
-    carouselCellImg.src = photo
+    carouselCellImg.setAttribute('data-flickity-lazyload', photo)
 })
 
 // Characters
