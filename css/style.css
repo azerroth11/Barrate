@@ -1,272 +1,319 @@
 :root {
-    --main: hsl(42, 50%, 92%);
-    --secondary: hsl(0, 100%, 28%);
+  --main: hsl(42, 50%, 92%);
+  --secondary: hsl(0, 100%, 28%);
 }
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 html {
-    background-color: #000;
-    scroll-behavior: smooth;
+  background-color: #000;
+  scroll-behavior: smooth;
 }
 
 body {
-    max-width: 1440px;
-    margin: 0 auto;
-    height: 100%;
-    font-size: 18px;
-    line-height: 1.5rem;
-    background-color: var(--main);
+  max-width: 1440px;
+  margin: 0 auto;
+  height: 100%;
+  font-size: 18px;
+  line-height: 1.5rem;
+  background-color: var(--main);
 }
 
 /* Commons */
 section {
-    padding: 1rem;
-    margin: 0 auto;
-    max-width: 80ch;
-    display: grid;
-    place-items: center;
+  padding: 1rem;
+  margin: 0 auto;
+  max-width: 80ch;
+  display: grid;
+  place-items: center;
 }
 
 section h1 {
-    padding: 1.75rem 0 0.25rem 0;
-    color: var(--secondary);
-    text-align: center;
+  padding: 1.75rem 0 0.25rem 0;
+  color: var(--secondary);
+  text-align: center;
 }
 
 img {
-    max-width: 100%;
-    max-height: 100%;
+  max-width: 100%;
+  max-height: 100%;
 }
 
 a {
-    text-decoration: none;
-    color: inherit;
+  text-decoration: none;
+  color: inherit;
 }
 
 .btn {
-    padding: 0.75rem 1.5rem;
-    margin: 1rem 0 0 0;
-    border: 2px var(--secondary) solid;
-    border-radius: 5px;
-    color: #fff;
-    font-weight: normal;
-    background-color: var(--secondary);
-    transition: all 0.5s;
-    text-decoration: none !important;
+  padding: 0.75rem 1.5rem;
+  margin: 1rem 0 0 0;
+  border: 2px var(--secondary) solid;
+  border-radius: 5px;
+  color: #fff;
+  font-weight: normal;
+  background-color: var(--secondary);
+  transition: all 0.5s;
+  text-decoration: none !important;
 }
 
 .btn:hover {
-    background-color: var(--main);
-    color: var(--secondary);
+  background-color: var(--main);
+  color: var(--secondary);
 }
 
 p {
-    max-width: 50ch;
+  max-width: 50ch;
 }
 
 .desktop {
-    display: none;
+  display: none;
 }
 
 /* Nav */
 header {
-    height: 20vh;
-    display: flex;
-    background-color: #000;
+  height: 20vh;
+  display: flex;
+  background-color: #000;
 }
 
 header img {
-    margin: 0 auto;
-    object-fit: contain;
-    max-height: 175px;
-    padding: 0 0.5rem;
+  margin: 1rem auto;
+  object-fit: contain;
+  max-height: 175px;
+  padding: 0 0.5rem;
 }
 
 nav {
-    position: sticky;
-    top: 0;
-    height: 40px;
-    z-index: 4;
+  position: sticky;
+  top: 0;
+  z-index: 4;
 }
 
 nav ul {
-    display: flex;
-    justify-content: center;
-    gap: 1.5rem;
-    width: 100%;
-    list-style: none;
-    font-size: 1.25rem;
-    background-color: #000;
-    color: var(--main);
-    padding: 0.5rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  height: 100%;
+  width: 100%;
+  list-style: none;
+  font-size: 1.25rem;
+  background-color: #000;
+  color: var(--main);
+  padding: 1rem 0;
 }
 
 nav a:hover {
-    color: #fff;
-    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
+  text-decoration: underline;
 }
 
 /* Hero */
 #hero {
-    height: max(500px, 70vh);
+  height: max(500px, 70vh);
 }
 
 #hero div {
-    display: grid;
-    place-items: center;
-    gap: 0.5rem;
-    margin: 0 auto;
-    height: 100%;
-    max-width: 50ch;
-    max-height: 600px;
+  display: grid;
+  place-items: center;
+  gap: 0.5rem;
+  margin: 0 auto;
+  height: 100%;
+  max-width: 50ch;
+  max-height: 600px;
 }
 
 #hero .intro:first-letter {
-    float: left;
-    font-size: 8vh;
-    color: #8c8273;
+  float: left;
+  font-size: 8vh;
+  color: #8c8273;
 }
 
 #hero p span {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 #hero iframe {
-    margin-top: 0.75rem;
-    width: 100%;
-    height: 100%;
+  margin-top: 0.75rem;
+  width: 100%;
+  height: 100%;
 }
 
 #hero .desktop {
-    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.3);
-    display: none;
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.3);
+  display: none;
+}
+
+/* Floating links */
+#links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5rem auto;
+  height: 7.5vh;
+  width: min(90%, 500px);
+  border: 2px solid var(--secondary);
+  border-radius: 25px;
+  overflow: visible;
+}
+
+#links img {
+  border-radius: 50%;
+  height: 15vh;
+  max-height: none;
+}
+
+#links i {
+  color: var(--secondary);
+  font-size: 40px;
+  transition: transform 0.25s, text-shadow 0.2s;
+}
+
+#links a:first-child,
+#links a:last-child {
+  margin: 0 0.25rem;
+}
+
+#links i:hover {
+  transform: translateY(-5%);
 }
 
 /* Histoire */
 #histoire {
-    min-height: 75vh;
+  min-height: 75vh;
 }
 
 #histoire div {
-    display: grid;
-    place-items: center;
-    gap: 0.5rem;
-    margin: 0 auto;
-    height: 100%;
-    width: 100%;
-    max-width: 50ch;
+  display: grid;
+  place-items: center;
+  gap: 0.5rem;
+  margin: 0 auto;
+  height: 100%;
+  width: 100%;
+  max-width: 50ch;
 }
 
 #histoire .desktop {
-    min-height: 50vh;
-    display: none;
+  min-height: 50vh;
+  display: none;
 }
 
 #histoire .desktop .characterDesc h2 {
-    position: absolute;
-    top: -35px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 300px;
-    text-align: center;
+  position: absolute;
+  top: -35px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 300px;
+  text-align: center;
 }
 
 #histoire .desktop img {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    border-radius: 5px;
-    z-index: 1;
-    transform: translateX(-50%);
-    transition: clip-path 0.5s, z-index 0.5s step-end;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  border-radius: 5px;
+  z-index: 1;
+  transform: translateX(-50%);
+  transition: clip-path 0.5s, z-index 0.5s step-end;
 }
 
 #histoire .desktop img:hover {
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%) !important;
-    z-index: 2;
-    transition: clip-path 0.5s, z-index 0.5s step-start;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%) !important;
+  z-index: 2;
+  transition: clip-path 0.5s, z-index 0.5s step-start;
 }
 
 #histoire .desktop #Karadec {
-    clip-path: polygon(0 0, 100% 0, 50% 50%, 50% 50%);
+  clip-path: polygon(0 0, 100% 0, 50% 50%, 50% 50%);
 }
 
 #histoire .desktop #Baldric {
-    clip-path: polygon(50% 50%, 50% 50%, 100% 100%, 0% 100%);
+  clip-path: polygon(50% 50%, 50% 50%, 100% 100%, 0% 100%);
 }
 #histoire .desktop #Gaucelin {
-    clip-path: polygon(50% 50%, 100% 0, 100% 100%, 50% 50%);
+  clip-path: polygon(50% 50%, 100% 0, 100% 100%, 50% 50%);
 }
 #histoire .desktop #SirPaulin {
-    clip-path: polygon(0 0, 50% 50%, 50% 50%, 0% 100%);
+  clip-path: polygon(0 0, 50% 50%, 50% 50%, 0% 100%);
 }
 
 #histoire .desktop .characterDesc p {
-    position: absolute;
-    bottom: -25.5%;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 38ch;
-    z-index: 3;
+  position: absolute;
+  bottom: -25.5%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 38ch;
+  z-index: 3;
 }
 
 /* Gallerie */
 #gallerie {
-    width: 100%;
-    max-width: 1440px;
-    gap: 0.75rem;
-    padding: 3rem 0 2.5 0;
+  width: 100%;
+  max-width: 1440px;
+  gap: 0.75rem;
+  padding: 3rem 0 2.5 0;
 }
 
 #gallerie h1 {
-    margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 
 .main-carousel {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 #gallerie img {
-    display: block;
-    height: 375px;
-    min-height: 250px;
-    max-height: 100%;
-    margin-right: 2.5px;
-    top: 50%;
-    transform: translateY(-50%);
+  display: block;
+  height: 375px;
+  min-height: 250px;
+  max-height: 100%;
+  margin-right: 2.5px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .is-fullscreen img {
-    height: 100vh !important;
-    width: 100vw !important;
-    object-fit: contain;
+  height: 100vh !important;
+  width: 100vw !important;
+  object-fit: contain;
 }
 
 /* Supporter */
 #supporter {
-    gap: 1rem;
-    min-height: 70vh;
+  gap: 1rem;
+  min-height: 70vh;
 }
 
 #supporter a {
-    text-decoration: underline;
+  text-decoration: underline;
+}
+
+/* Footer */
+footer {
+  display: grid;
+  place-items: center;
+  text-align: center;
+  background-color: #000;
+  color: #fff;
+}
+
+footer p {
+  margin: 1rem auto;
 }
 
 @media screen and (min-width: 1000px) {
-    #hero,
-    #histoire {
-        display: flex;
-        max-width: 1250px;
-    }
+  #hero,
+  #histoire {
+    display: flex;
+    max-width: 1250px;
+  }
 
-    .desktop {
-        display: block !important;
-        position: relative;
-    }
+  .desktop {
+    display: block !important;
+    position: relative;
+  }
 }
